@@ -1,0 +1,167 @@
+:root{
+    --Fondo: #201d1d;
+    --PrimaryColor: #d7d5d5;
+    --Grey:#4c4c4c;
+    --Brown:#442424;
+    --SecondaryColor: #b34636;
+    --REDCORNER: #e63946;
+    --BLUECORNER: #3a74a7;
+;
+}
+*{
+    color: var(--PrimaryColor);
+}
+
+  body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   margin: 0px;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Fondo);
+  }
+#Encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+#Encabezado h1{
+font-size: 3rem;
+}
+#EsquinaRoja{
+    justify-content: start;
+}
+#EsquinaAzul{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+  .PELEA_ACTUAL{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  .PELEA_ACTUAL h2{
+    font-size: 2rem;
+    margin: 0rem;
+  }
+  .PELEA_ACTUAL h3{ 
+    font-size: 2rem;
+    margin: 0rem;
+  }
+  .PELEA_ACTUAL h4{ 
+    font-size: 2rem;
+    margin: 0rem;
+  }
+  #PELEADOR1{
+    color: var(--REDCORNER);
+  }
+  #PELEADOR2{
+    color: var(--BLUECORNER);
+  }
+  .ASALTOS{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .ROUNDS{
+    background-color: var(--Brown);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 0.3rem solid var(--SecondaryColor);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .ROUNDS h2{
+    background-color: var(--SecondaryColor);
+    margin: 0px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--Fondo);
+  }
+ .JUEZ{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--Fondo);
+    border: 0.2rem solid var(--SecondaryColor);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+ }
+ .JUEZ h4{
+    margin: 0rem;
+ }
+
+
+ .Puntos{
+    display: flex;
+    gap: 1rem;
+ }
+ .Puntos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+ }
+ .EsquinaR{
+    color: var(--REDCORNER);
+ }
+ .EsquinaA{
+    color: var(--BLUECORNER);
+ }
+ .BOTONES{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--Fondo);
+    gap: 2rem;
+ }
+ .BOTONES button{
+   padding: 1rem;
+    color: var(--Fondo);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    background-color: var(--Brown);
+    border: 0.2rem solid var(--SecondaryColor);
+    color: var(--PrimaryColor);
+ }
+ input{
+background-color: var(--Fondo);
+border: none;
+border: 0.2rem solid var(--SecondaryColor);
+transition: 0.1s;
+border-radius: 0.5rem;
+text-align: center;
+ }
+ input:focus {
+    outline: none;
+    border: 0.3rem solid var(--SecondaryColor);
+    transition: 0.1s;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Para Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+ form{
+    display: flex;
+    flex-direction: column;
+  width:  95%;
+ }
