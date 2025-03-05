@@ -163,5 +163,5 @@ input[type=number] {
  form{
     display: flex;
     flex-direction: column;
-  width:  95%;
+  width:  100%;
  }
