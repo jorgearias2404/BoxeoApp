@@ -1,6 +1,13 @@
 const Inputs = document.querySelectorAll("input")
-
+const Peleador1 = document.getElementById('PELEADOR1')
+const Peleador2 = document.getElementById('PELEADOR2')
+const NuevoPeleador = document.getElementById('NuevaPelea')
+const PersonaA = document.getElementById('PELEADORA')
+const PersonaB = document.getElementById('PELEADORB')
+const Combate = document.querySelector('.Combate')
+const Peleadores = document.querySelector('.Peleadores')
 const BtonReiniciar = document.getElementById("Reiniciar")
+const Nuevo = document.getElementById('Nuevo')
 
 BtonReiniciar.addEventListener('click',function(event){
     event.preventDefault();
@@ -8,20 +15,6 @@ BtonReiniciar.addEventListener('click',function(event){
         input.value = '';
     });
 })
-
-
-const Peleador1 = document.getElementById('PELEADOR1')
-const Peleador2 = document.getElementById('PELEADOR2')
-
-const NuevoPeleador = document.getElementById('NuevaPelea')
-const PersonaA = document.getElementById('PELEADORA')
-const PersonaB = document.getElementById('PELEADORB')
-
-
-
-const Combate = document.querySelector('.Combate')
-
-const Peleadores = document.querySelector('.Peleadores')
 
 NuevoPeleador.addEventListener('click',function (){
     
@@ -39,9 +32,6 @@ NuevoPeleador.addEventListener('click',function (){
 }
    
 })
-
-
-const Nuevo = document.getElementById('Nuevo')
 
 Nuevo.addEventListener('click',function(event){
    event.preventDefault();
