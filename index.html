@@ -8,6 +8,7 @@
     <title>Puntos Boxeo</title>
 </head>
 <body>
+<!-- CARGA DE PELEADORES -->
     <div class="Peleadores">
         <h1>NUEVA PELEA</h1>
         <section class="NuevaPelea">
@@ -35,6 +36,8 @@
             CARGAR NUEVA PELEA
         </button>
     </div>
+
+<!-- CARGA DE PUNTACION DE LOS ROUNDS -->
     <div class="Combate">
         <header id="Encabezado">
             <h1>~ ~ PELEA ACTUAL ~ ~</h1>
@@ -58,7 +61,7 @@
     
         <form action="/">
             <div class="ASALTOS">
-                <!-- ROUND 1 -->
+    <!-- ROUND 1 -->
             <section class="ROUNDS">
                 <h2>ROUND 1</h2>
                 <!-- JUEZ1 -->
@@ -67,11 +70,11 @@
                     <div class="Puntos">
                         <div>
                             <label for="R1-J1-P1" class="EsquinaR">E . R</label>
-                            <input id="R1-J1-P1" type="number">
+                            <input id="R1-J1-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                         </div>
                         <div>
                             <label for="R1-J1-P2" class="EsquinaA">E . A</label>
-                            <input id="R1-J1-P2" type="number">
+                            <input id="R1-J1-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                         </div>
                     </div>
                </div>
@@ -81,11 +84,11 @@
                 <div class="Puntos">
                     <div>
                         <label for="R1-J2-P1" class="EsquinaR">E . R</label>
-                        <input id="R1-J2-P1" type="number">
+                        <input id="R1-J2-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                     <div>
                         <label for="R1-J2-P2" class="EsquinaA">E . A</label>
-                        <input id="R1-J2-P2" type="number">
+                        <input id="R1-J2-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                 </div>
                </div>
@@ -95,11 +98,11 @@
                 <div class="Puntos">
                     <div>
                         <label for="R1-J3-P1" class="EsquinaR">E . R</label>
-                        <input id="R1-J3-P1" type="number">
+                        <input id="R1-J3-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                     <div>
                         <label for="R1-J3-P2" class="EsquinaA">E . A</label>
-                        <input id="R1-J3-P2" type="number">
+                        <input id="R1-J3-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()"> 
                     </div>
                 </div>
                </div>
@@ -113,11 +116,11 @@
                     <div class="Puntos">
                         <div>
                             <label for="R2-J1-P1" class="EsquinaR">E . R</label>
-                            <input id="R2-J1-P1" type="number">
+                            <input id="R2-J1-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                         </div>
                         <div>
                             <label for="R2-J1-P2" class="EsquinaA">E . A</label>
-                            <input id="R2-J1-P2" type="number">
+                            <input id="R2-J1-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                         </div>
                     </div>
             </div>
@@ -127,11 +130,11 @@
                 <div class="Puntos">
                     <div>
                         <label for="R2-J2-P1" class="EsquinaR">E . R</label>
-                        <input id="R2-J2-P1" type="number">
+                        <input id="R2-J2-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                     <div>
                         <label for="R2-J2-P2" class="EsquinaA">E . A</label>
-                        <input id="R2-J2-P2" type="number">
+                        <input id="R2-J2-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                 </div>
             </div>
@@ -141,11 +144,11 @@
                 <div class="Puntos">
                     <div>
                         <label for="R2-J3-P1" class="EsquinaR">E . R</label>
-                        <input id="R2-J3-P1" type="number">
+                        <input id="R2-J3-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                     <div>
                         <label for="R1-J3-P2" class="EsquinaA">E . A</label>
-                        <input id="R1-J3-P2" type="number">
+                        <input id="R1-J3-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                 </div>
             </div>
@@ -159,11 +162,11 @@
                     <div class="Puntos">
                         <div>
                             <label for="R3-J1-P1" class="EsquinaR">E . R</label>
-                            <input id="R3-J1-P1" type="number">
+                            <input id="R3-J1-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                         </div>
                         <div>
                             <label for="R3-J1-P2" class="EsquinaA">E . A</label>
-                            <input id="R3-J1-P2" type="number">
+                            <input id="R3-J1-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                         </div>
                     </div>
             </div>
@@ -173,11 +176,11 @@
                 <div class="Puntos">
                     <div>
                         <label for="R3-J2-P1" class="EsquinaR">E . R</label>
-                        <input id="R3-J2-P1" type="number">
+                        <input id="R3-J2-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                     <div>
                         <label for="R3-J2-P2" class="EsquinaA">E . A</label>
-                        <input id="R3-J2-P2" type="number">
+                        <input id="R3-J2-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                 </div>
             </div>
@@ -187,11 +190,11 @@
                 <div class="Puntos">
                     <div>
                         <label for="R3-J3-P1" class="EsquinaR">E . R</label>
-                        <input id="R3-J3-P1" type="number">
+                        <input id="R3-J3-P1" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                     <div>
                         <label for="R3-J3-P2" class="EsquinaA">E . A</label>
-                        <input id="R3-J3-P2" type="number">
+                        <input id="R3-J3-P2" type="number" min="7" max="10" required onblur="ajustarValoresInputs()">
                     </div>
                 </div>
             </div>
@@ -200,11 +203,12 @@
     <div class="BOTONES">
         <Button id="Reiniciar">REINCIAR</Button>
         <button id="Nuevo">Nuevos Peleadores</button>
-        <Button>Resultado</Button>
+        <Button id="Resultado" >Resultado</Button>
     </div>
         </form>
     </div>
-   
+
+    <!-- RESULTADOS DE LOS ROUNDS -->
 
     <script src="./script.js"> </script>
     
