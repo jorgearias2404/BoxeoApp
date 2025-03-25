@@ -23,6 +23,18 @@
     flex-direction: column;
     background-color: var(--Fondo);
   }
+  .Combate{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   margin: 0px;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Fondo);
+    display: none;
+  }
 #Encabezado{
     display: flex;
     flex-direction: column;
@@ -33,13 +45,66 @@
 #Encabezado h1{
 font-size: 3rem;
 }
-#EsquinaRoja{
-    justify-content: start;
-}
+
 #EsquinaAzul{
     display: flex;
     flex-direction: column;
     align-items: end;
+}
+#PELEADORA{
+  border: none;
+  background-color: var(--Grey);
+  height: 3rem;
+  width: 20rem;
+  color: var(--REDCORNER);
+  font-size: 2rem;
+}
+#PELEADORB{
+  border: none;
+  background-color: var(--Grey);
+  height: 3rem;
+  width: 20rem;
+  color: var(--BLUECORNER);
+  font-size: 2rem;
+
+}
+.Resultado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+.Peleadores{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+.Peleadores button{
+  margin-top: 4rem;
+  background-color: var(--Fondo);
+  border: 0.15rem solid var(--SecondaryColor);
+  border-radius: 0.5rem;
+  height: 2rem;
+  transition: 0.3s;
+}
+.Peleadores button:hover{
+background-color: var(--SecondaryColor);
+color: var(--Fondo);
+transition: 0.3s;
+}
+.NuevaPelea{
+ display: flex;
+
+justify-content: center; 
+align-items: center;
 }
 
   .PELEA_ACTUAL{
@@ -67,8 +132,9 @@ font-size: 3rem;
   }
   .ASALTOS{
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
   }
   .ROUNDS{
     background-color: var(--Brown);
@@ -80,6 +146,7 @@ font-size: 3rem;
     border: 0.3rem solid var(--SecondaryColor);
     padding: 1rem;
     border-radius: 0.5rem;
+    width: 20%;
   }
   .ROUNDS h2{
     background-color: var(--SecondaryColor);
@@ -97,6 +164,7 @@ font-size: 3rem;
     border: 0.2rem solid var(--SecondaryColor);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    width: 60%;
  }
  .JUEZ h4{
     margin: 0rem;
@@ -137,7 +205,15 @@ font-size: 3rem;
     background-color: var(--Brown);
     border: 0.2rem solid var(--SecondaryColor);
     color: var(--PrimaryColor);
+    transition: 0.3s;
  }
+ .BOTONES button:hover{
+
+   background-color: var(--SecondaryColor);
+   border: 0.2rem solid var(--Brown);
+   color: var(--Fondo);
+   transition: 0.3s;
+}
  input{
 background-color: var(--Fondo);
 border: none;
@@ -145,6 +221,8 @@ border: 0.2rem solid var(--SecondaryColor);
 transition: 0.1s;
 border-radius: 0.5rem;
 text-align: center;
+width: 100%;
+font-size: 1rem;
  }
  input:focus {
     outline: none;
