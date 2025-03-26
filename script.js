@@ -293,11 +293,13 @@ function CargarResultadosDeLosRound(){
     const ganadorTotal = document.querySelector('#Ganador_Total h3');
     if (puntosRojo > puntosAzul) {
         ganadorTotal.textContent = Peleador1.textContent;
+        ganadorTotal.style.color ="#e63946";
     } else if (puntosAzul > puntosRojo) {
         ganadorTotal.textContent = Peleador2.textContent;
+        ganadorTotal.style.color="#3a74a7"
     } else {
         ganadorTotal.textContent = "EMPATE TÉCNICO";
-    }
+    }             
 }
 
 
