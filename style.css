@@ -68,6 +68,48 @@ font-size: 3rem;
   font-size: 2rem;
 
 }
+.Resultados{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--Fondo);
+}
+
+.GANADORR{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Rounds{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+#Ganador_Total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#Resultados_Round{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+gap: 4rem;
+  margin: 0px;
+  align-items: center;
+  background-color: var(--Fondo);
+
+}
 .Resultado{
   display: flex;
   flex-direction: column;
