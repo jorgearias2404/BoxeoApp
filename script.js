@@ -53,12 +53,13 @@ function ajustarValoresInputs() {
 }
 
 function TodoCargado(){
-    for (let i = 0; i < Inputs.length; i++) {
-        if (Inputs[i].value === '') {
-            return false; // Si algún input está vacío, retorna false
+    const inputsJueces = document.querySelectorAll('.Combate input[type="number"]');
+    for (const input of inputsJueces) {
+        if (input.value === "") {
+            return false;
         }
     }
-    return true; // Si todos los inputs están llenos, retorna true
+ return true
 }
 let ER_R1,EA_R1,ER_R2,EA_R2,ER_R3,EA_R3;
 function Round1(){
@@ -95,7 +96,7 @@ function Round1(){
     } else if (totalRoja < totalAzul) {
      
         EA_R1 = "10";
-        if (totalAzul - totalRojo <= 2) {
+        if (totalAzul - totalRoja <= 2) {
             ER_R1 = "9";
         }
         if (totalAzul - totalRoja > 2 && totalAzul - totalRoja <= 4 ) {
@@ -149,7 +150,7 @@ function Round2(){
     } else if (totalRoja < totalAzul) {
      
         EA_R2 = "10";
-        if (totalAzul - totalRojo <= 2) {
+        if (totalAzul - totalRoja <= 2) {
             ER_R2 = "9";
         }
         if (totalAzul - totalRoja > 2 && totalAzul - totalRoja <= 4 ) {
@@ -200,8 +201,8 @@ function Round3(){
         return "Rojo";
     } else if (totalRoja < totalAzul) {
      
-        EA_R2 = "10";
-        if (totalAzul - totalRojo <= 2) {
+        EA_R3 = "10";
+        if (totalAzul - totalRoja <= 2) {
             ER_R3 = "9";
         }
         if (totalAzul - totalRoja > 2 && totalAzul - totalRoja <= 4 ) {
@@ -229,54 +230,74 @@ const Result_R3_ER = document.getElementById('Resultado_R3_ER');
 const Result_R3_EA = document.getElementById('Resultado_R3_EA');
 
 
-const View_Final  = document.getElementById('Resultado');
+const View_Final = document.querySelector('.Resultados'); // Correcto
 function CargarResultadosDeLosRound(){
-     if (Round1() === "Rojo") {
-        Result_R1_ER.textContent = "10"
+    // Almacenar resultados una sola vez
+    const resultadoR1 = Round1();
+    const resultadoR2 = Round2();
+    const resultadoR3 = Round3();
+
+    // Round 1
+    if (resultadoR1 === "Rojo") {
+        Result_R1_ER.textContent = "10";
         Result_R1_EA.textContent = EA_R1;
-     }
-     if (Round1() === "Azul") {
-        Result_R1_EA.textContent = "10"
+        document.getElementById('Ganador_R1').textContent = Peleador1.textContent;
+    } else if (resultadoR1 === "Azul") {
+        Result_R1_EA.textContent = "10";
         Result_R1_ER.textContent = ER_R1;
-     }
-     if (Round1() === "Empate") {
-        Result_R1_EA.textContent = "10"
-        Result_R1_ER.textContent = "10"
-     }
-      
+        document.getElementById('Ganador_R1').textContent = Peleador2.textContent;
+    } else {
+        Result_R1_ER.textContent = "10";
+        Result_R1_EA.textContent = "10";
+        document.getElementById('Ganador_R1').textContent = "Empate";
+    }
 
-
-     if (Round2() === "Rojo") {
-        Result_R2_ER.textContent = "10"
+    // Round 2
+    if (resultadoR2 === "Rojo") {
+        Result_R2_ER.textContent = "10";
         Result_R2_EA.textContent = EA_R2;
-     }
-     if (Round2() === "Azul") {
-        Result_R2_EA.textContent = "10"
+        document.getElementById('Ganador_R2').textContent = Peleador1.textContent;
+    } else if (resultadoR2 === "Azul") {
+        Result_R2_EA.textContent = "10";
         Result_R2_ER.textContent = ER_R2;
-     }
-     if (Round2() === "Empate") {
-        Result_R2_EA.textContent = "10"
-        Result_R2_ER.textContent = "10"
-     }
+        document.getElementById('Ganador_R2').textContent = Peleador2.textContent;
+    } else {
+        Result_R2_ER.textContent = "10";
+        Result_R2_EA.textContent = "10";
+        document.getElementById('Ganador_R2').textContent = "Empate";
+    }
 
-
-
-     
-     if (Round3() === "Rojo") {
-        Result_R3_ER.textContent = "10"
+    // Round 3
+    if (resultadoR3 === "Rojo") {
+        Result_R3_ER.textContent = "10";
         Result_R3_EA.textContent = EA_R3;
-     }
-     if (Round3() === "Azul") {
-        Result_R3_EA.textContent = "10"
+        document.getElementById('Ganador_R3').textContent = Peleador1.textContent;
+    } else if (resultadoR3 === "Azul") {
+        Result_R3_EA.textContent = "10";
         Result_R3_ER.textContent = ER_R3;
-     }
-     if (Round3() === "Empate") {
-        Result_R3_EA.textContent = "10"
-        Result_R3_ER.textContent = "10"
-     }
+        document.getElementById('Ganador_R3').textContent = Peleador2.textContent;
+    } else {
+        Result_R3_ER.textContent = "10";
+        Result_R3_EA.textContent = "10";
+        document.getElementById('Ganador_R3').textContent = "Empate";
+    }
 
+    // Calcular ganador total
+    let puntosRojo = 0;
+    let puntosAzul = 0;
+    [resultadoR1, resultadoR2, resultadoR3].forEach(resultado => {
+        if (resultado === "Rojo") puntosRojo++;
+        if (resultado === "Azul") puntosAzul++;
+    });
 
-
+    const ganadorTotal = document.querySelector('#Ganador_Total h3');
+    if (puntosRojo > puntosAzul) {
+        ganadorTotal.textContent = Peleador1.textContent;
+    } else if (puntosAzul > puntosRojo) {
+        ganadorTotal.textContent = Peleador2.textContent;
+    } else {
+        ganadorTotal.textContent = "EMPATE TÉCNICO";
+    }
 }
 
 
