@@ -101,12 +101,11 @@ font-size: 3rem;
 }
 
 #Ganador_Total {
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--Brown);
-    border: 2px solid var(--SecondaryColor);
+  
     border-radius: 0.5rem;
   
     
