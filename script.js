@@ -9,6 +9,8 @@ const Peleadores = document.querySelector('.Peleadores');
 const BtonReiniciar = document.getElementById("Reiniciar");
 const Nuevo = document.getElementById('Nuevo');
 const Resultado = document.getElementById('Resultado');
+const NuevoRegreso = document.getElementById('Regreso_a_Nuevo')
+
 
 BtonReiniciar.addEventListener('click', function (event) {
     event.preventDefault();
@@ -315,3 +317,9 @@ else{
     alert("Se deben cargar los datos de todos los jueces")
 }
 });
+
+NuevoRegreso.addEventListener('click',function (){
+View_Final.style.display = "none";
+Peleadores.style.display = "block";
+Peleadores.style.display = "flex"
+})

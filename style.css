@@ -8,6 +8,7 @@
     --BLUECORNER: #3a74a7;
 ;
 }
+
 *{
     color: var(--PrimaryColor);
 }
@@ -68,9 +69,27 @@ font-size: 3rem;
   font-size: 2rem;
 
 }
+#Regreso_a_Nuevo{
+  padding: 1rem;
+  color: var(--Fondo);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  background-color: var(--Brown);
+  border: 0.2rem solid var(--SecondaryColor);
+  color: var(--PrimaryColor);
+  transition: 0.3s;
+}
+#Regreso_a_Nuevo:hover{
+  background-color: var(--SecondaryColor);
+  border: 0.2rem solid var(--Brown);
+  color: var(--Fondo);
+  transition: 0.3s;
+}
 .Resultados{
   font-family:Georgia, 'Times New Roman', Times, serif;
-  display: flex;
+
   justify-content: center;
   align-items: center; /* Añadido para centrado vertical */
   width: 100%;
@@ -81,6 +100,17 @@ font-size: 3rem;
   display: none;
 }
 
+#Ganador_Total {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Brown);
+    border: 2px solid var(--SecondaryColor);
+    border-radius: 0.5rem;
+  
+    
+}
 .GANADORR{
   display: flex;
   align-items: center;
@@ -100,13 +130,6 @@ font-size: 3rem;
   background-color: var(--Brown);
   
 }
-#Ganador_Total {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-}
 
 #Resultados_Round{
   display: flex;
@@ -116,6 +139,7 @@ font-size: 3rem;
   gap: 4rem;
   flex-wrap: wrap; /* Para responsividad */
   padding: 2rem 0; /* Espaciado vertical */
+  
 
 }
 .Resultado{
