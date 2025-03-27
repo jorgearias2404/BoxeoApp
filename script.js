@@ -64,7 +64,7 @@ function TodoCargado(){
  return true
 }
 let ER_R1,EA_R1,ER_R2,EA_R2,ER_R3,EA_R3;
-function Round1(){
+function Round1() {
     const puntosRoja = [
         parseInt(document.getElementById('R1-J1-P1').value) || 0,
         parseInt(document.getElementById('R1-J2-P1').value) || 0,
@@ -77,48 +77,31 @@ function Round1(){
         parseInt(document.getElementById('R1-J3-P2').value) || 0
     ];
 
-    // Sumar los puntos de cada esquina
     const totalRoja = puntosRoja.reduce((sum, puntos) => sum + puntos, 0);
     const totalAzul = puntosAzul.reduce((sum, puntos) => sum + puntos, 0);
-    
 
-    // Determinar el ganador
     if (totalRoja > totalAzul) {
         ER_R1 = "10";
-        if (totalRoja - totalAzul <= 2) {
-            EA_R1 = "9";
-        }
-        if (totalRoja - totalAzul > 2 && totalRoja - totalAzul <= 4 ) {
-            EA_R1 = "8";
-        }
-        if (totalRoja - totalAzul > 4) {
-            EA_R1 = "7";
-        }
+        // Nueva lógica para el perdedor
+        const puntosAzulSin10 = puntosAzul.filter(p => p !== 10);
+        EA_R1 = puntosAzulSin10.length > 0 ? Math.max(...puntosAzulSin10).toString() : "9";
         return "Rojo";
+        
     } else if (totalRoja < totalAzul) {
-     
         EA_R1 = "10";
-        if (totalAzul - totalRoja <= 2) {
-            ER_R1 = "9";
-        }
-        if (totalAzul - totalRoja > 2 && totalAzul - totalRoja <= 4 ) {
-            ER_R1 = "8";
-        }
-        if (totalAzul - totalRoja > 4) {
-            ER_R1 = "7";
-        }
-
-
+        // Nueva lógica para el perdedor
+        const puntosRojaSin10 = puntosRoja.filter(p => p !== 10);
+        ER_R1 = puntosRojaSin10.length > 0 ? Math.max(...puntosRojaSin10).toString() : "9";
         return "Azul";
+        
     } else {
         ER_R1 = "10";
         EA_R1 = "10";
         return "Empate";
     }
-  
 }
 
-function Round2(){
+function Round2() {
     const puntosRoja = [
         parseInt(document.getElementById('R2-J1-P1').value) || 0,
         parseInt(document.getElementById('R2-J2-P1').value) || 0,
@@ -131,39 +114,21 @@ function Round2(){
         parseInt(document.getElementById('R2-J3-P2').value) || 0
     ];
 
-    // Sumar los puntos de cada esquina
     const totalRoja = puntosRoja.reduce((sum, puntos) => sum + puntos, 0);
     const totalAzul = puntosAzul.reduce((sum, puntos) => sum + puntos, 0);
 
-    // Determinar el ganador
-      // Determinar el ganador
-      if (totalRoja > totalAzul) {
+    if (totalRoja > totalAzul) {
         ER_R2 = "10";
-        if (totalRoja - totalAzul <= 2) {
-            EA_R2 = "9";
-        }
-        if (totalRoja - totalAzul > 2 && totalRoja - totalAzul <= 4 ) {
-            EA_R2 = "8";
-        }
-        if (totalRoja - totalAzul > 4) {
-            EA_R2 = "7";
-        }
+        const puntosAzulSin10 = puntosAzul.filter(p => p !== 10);
+        EA_R2 = puntosAzulSin10.length > 0 ? Math.max(...puntosAzulSin10).toString() : "9";
         return "Rojo";
+        
     } else if (totalRoja < totalAzul) {
-     
         EA_R2 = "10";
-        if (totalAzul - totalRoja <= 2) {
-            ER_R2 = "9";
-        }
-        if (totalAzul - totalRoja > 2 && totalAzul - totalRoja <= 4 ) {
-            ER_R2 = "8";
-        }
-        if (totalAzul - totalRoja > 4) {
-            ER_R2 = "7";
-        }
-
-
+        const puntosRojaSin10 = puntosRoja.filter(p => p !== 10);
+        ER_R2 = puntosRojaSin10.length > 0 ? Math.max(...puntosRojaSin10).toString() : "9";
         return "Azul";
+        
     } else {
         ER_R2 = "10";
         EA_R2 = "10";
@@ -171,7 +136,8 @@ function Round2(){
     }
 }
 
-function Round3(){
+
+function Round3() {
     const puntosRoja = [
         parseInt(document.getElementById('R3-J1-P1').value) || 0,
         parseInt(document.getElementById('R3-J2-P1').value) || 0,
@@ -184,38 +150,21 @@ function Round3(){
         parseInt(document.getElementById('R3-J3-P2').value) || 0
     ];
 
-    // Sumar los puntos de cada esquina
     const totalRoja = puntosRoja.reduce((sum, puntos) => sum + puntos, 0);
     const totalAzul = puntosAzul.reduce((sum, puntos) => sum + puntos, 0);
 
-    // Determinar el ganador
     if (totalRoja > totalAzul) {
         ER_R3 = "10";
-        if (totalRoja - totalAzul <= 2) {
-            EA_R3 = "9";
-        }
-        if (totalRoja - totalAzul > 2 && totalRoja - totalAzul <= 4 ) {
-            EA_R3 = "8";
-        }
-        if (totalRoja - totalAzul > 4) {
-            EA_R3 = "7";
-        }
+        const puntosAzulSin10 = puntosAzul.filter(p => p !== 10);
+        EA_R3 = puntosAzulSin10.length > 0 ? Math.max(...puntosAzulSin10).toString() : "9";
         return "Rojo";
+        
     } else if (totalRoja < totalAzul) {
-     
         EA_R3 = "10";
-        if (totalAzul - totalRoja <= 2) {
-            ER_R3 = "9";
-        }
-        if (totalAzul - totalRoja > 2 && totalAzul - totalRoja <= 4 ) {
-            ER_R3 = "8";
-        }
-        if (totalAzul - totalRoja > 4) {
-            ER_R3 = "7";
-        }
-
-
+        const puntosRojaSin10 = puntosRoja.filter(p => p !== 10);
+        ER_R3 = puntosRojaSin10.length > 0 ? Math.max(...puntosRojaSin10).toString() : "9";
         return "Azul";
+        
     } else {
         ER_R3 = "10";
         EA_R3 = "10";
